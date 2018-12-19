@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/order/order"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "摄影公众号",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#c7c7c7",
+    "selectedColor": "#FCCE39",
+    "backgroundColor": "#ffffff",
+    "position":"bottom",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home@highlight.png"
+    },
+    {
+      "pagePath": "pages/order/order",
+      "text": "订单",
+      "iconPath": "images/order.png",
+      "selectedIconPath": "images/order@highlight.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/my@highlight.png"
+    }]
+  }
+}
