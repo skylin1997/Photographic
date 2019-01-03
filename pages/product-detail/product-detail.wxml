@@ -1,0 +1,53 @@
+<view class='container'>
+  <view class='msg'>
+    <image class='msg-image' src='http://172.21.6.118:8080//images{{productDetail.proName}}'></image>
+    <view class='msg-text'>
+      <text class='msg-name'>{{productDetail.proName}}</text>
+      <text class='msg-price'>￥{{productDetail.proPrice}}</text>
+    </view>
+  </view>
+    <view class='item'>
+    <text class='text'>门店选择</text>
+    <view class='storeList item-content' hidden="{{!isNull}}" >
+      <block wx:for="{{storeList}}" wx:key="id">
+        <view class="store {{index==stoId?'store-hover':''}}" bindtap="onStore" data-index="{{index}}" >
+          <text>{{item.stoName}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='null-store item-content' hidden="{{isNull}}">本项目暂无门店可以选择，请另外选择</view>
+  <view class='item'>
+    <text class='text'>包含项目</text>
+    <view class='project'>
+      <view class='project-item'>
+        <image src='../../images/product-detail/1.png'></image>
+        <text>化妆</text>
+      </view>
+      <view class='project-item'>
+        <image src='../../images/product-detail/2.png'></image>
+        <text>拍摄</text>
+      </view>
+      <view class='project-item'>
+        <image src='../../images/product-detail/3.png'></image>
+        <text>修图</text>
+      </view>
+      <view class='project-item'>
+        <image src='../../images/product-detail/4.png'></image>
+        <text>冲印</text>
+      </view>
+    </view>
+  </view>
+  <view class='item'>
+    <text class='text'>拍摄用途</text>
+    <text class='item-content'>{{productDetail.proUse}}</text>
+  </view>
+  <view class='item'>
+    <text class='text'>注意事项</text>
+    <text class='item-content'>{{productDetail.proAttention}}</text>
+  </view>
+  <view class='item'>
+    <text class='text'>优秀照片</text>
+  </view>
+ <view class='order' bindtap='onOrder'>立即预订</view>
+</view>

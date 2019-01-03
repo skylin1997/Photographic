@@ -1,0 +1,73 @@
+.moreorder{
+  flex-direction: row-reverse;
+  font-size: 28rpx;
+  justify-content: center;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  border: 2rpx solid beige;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  color: rgb(145, 137, 137);
+}
+.moreorderwhite{
+  display: flex;
+  justify-content: space-between;
+  font-style: PingFang SC;
+  color: rgba(255,255,255,1);
+  height: 80rpx;
+  
+  margin-right: 30rpx;
+  width: 690rpx;
+  background: rgba(82,169,255,1);
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+
+}
+.ordernr{
+  display: flex;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+
+}
+.left-ordernr{
+  border-bottom:2rpx solid black;
+  margin-top: 30rpx;
+  padding-bottom: 10rpx;
+}
+.right-ordernr{
+  border-bottom:2rpx solid black;
+  padding-bottom: 10rpx;
+  padding-left: 280rpx;
+  color: rgba(0,0,0,1);
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.ordermoney{
+  margin-top: 60rpx;
+  color: rgba(0,0,0,1);
+  margin-left: 450rpx;
+  padding-bottom: 20rpx;
+  font-weight: bold;
+}
+
+.moreorder-buttom{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 280rpx;
+  
+}
+.left-buttom{
+  background: yellow;
+  width: 280rpx;
+  height: 56rpx;
+  text-align: center;
+  padding-top: 12rpx;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+}
+.right-buttom{
+  background: rgb(167, 167, 157);
+  width: 280rpx;
+  height: 56rpx;
+  text-align: center;
+  padding-top: 12rpx;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+}

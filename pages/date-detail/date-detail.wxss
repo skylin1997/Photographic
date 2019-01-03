@@ -1,0 +1,32 @@
+/* pages/detailtime/detailtime.wxss */
+.detail-date-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.detail-date-header{
+  background-color: rgba(252,206,57,1);
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.detail-date-header image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.detail-date-header text{
+  font-family: "PingFangSC-Thin";
+  font-size: 24rpx;
+  margin-left: 14rpx;
+}
+.detail-date-center{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+}

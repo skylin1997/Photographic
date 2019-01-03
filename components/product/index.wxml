@@ -1,0 +1,7 @@
+<view class='container' bindtap='onProduct'>
+  <image src='http://172.21.6.118:8080//images{{product.proSample}}'></image>
+  <view class='msg'>
+    <text class='msg-name'>{{product.proName}}</text>
+    <text class='msg-price'>￥{{product.proPrice}}</text>
+  </view>
+</view>

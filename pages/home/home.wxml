@@ -1,2 +1,25 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class='container'>
+  <v-wheel />
+  <view class='product-container'>
+    <view class='title'>
+      <text>拍摄类型选择</text>
+      <view class='more' bindtap='onMore'>
+        <text>更多</text>
+        <image src='../../images/home/more.png'></image>
+      </view>
+    </view>
+    <view class='products'>
+      <block wx:key="id" wx:for="{{products}}">
+        <v-product product="{{item}}"/>
+      </block>
+    </view>
+  </view>
+  <view class='address-container'>
+      <text>门店地址</text>
+      <scroll-view scroll-x="true" style="height: 150px;" class='scroll'>
+        <block wx:key="id" wx:for="{{addresses}}">
+          <v-address address="{{item}}" />
+        </block>
+      </scroll-view>
+    </view>
+</view>

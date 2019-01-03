@@ -1,0 +1,15 @@
+
+<view class='overorder'>
+  <view class='overorder-image'>
+    <image style='height:116px;width:124px;' mode="aspectFit" src='../../images/Date.png'></image>
+  </view>
+  <view class='order-success'>预约成功!</view>
+  <view class='order-attention'>注意事项:</view>
+  <view class='attentionnr'>空空请提前10分钟到达，床前明月光 疑似地上霜举头望明月低头思故乡，小桥流水人家古道西风瘦马夕阳西下断肠人在天涯</view>
+  <view class='order-buttom'>
+    <view class='order-buttom-text' bindtap='onHome'>
+      查看订单
+    </view>
+    <view class='order-buttom-text' bindtap='onMore'>返回首页</view>
+  </view>
+</view>

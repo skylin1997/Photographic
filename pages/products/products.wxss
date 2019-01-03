@@ -1,0 +1,9 @@
+/* pages/products/products.wxss */
+.products{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding:0 24rpx 0 24rpx;
+
+}

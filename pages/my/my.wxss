@@ -6,16 +6,68 @@
 }
 
 .userinfo-avatar {
+  position: relative;
+  bottom:300rpx;
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
+  border: 3px solid white;
   border-radius: 50%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  position: relative;
+  bottom: 280rpx;
+  color: #000;
+  font-family: Noto Sans S Chinese;
+  font-size: 28rpx;
+  font-weight: DemiLight;
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 400rpx;
+}
+
+.button-portrait {
+  position: absolute;
+  top: 100rpx;
+  width: 300rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #fff;
+}
+
+.button-background{
+  width: 752rpx;
+  height: 372rpx;
+}
+
+.button-left{
+  width: 180rpx;
+  height: 54rpx;
+  position: absolute;
+  left: 64rpx;
+  top: 464rpx;
+  background-color: rgba(252,207,63,1);
+  font-family: PingFang SC;
+  font-size: 28rpx;
+  font-weight: Regular;
+  border-radius: 28rpx;
+  text-align: center;
+  line-height: 54rpx;
+}
+
+.button-right{
+  width: 180rpx;
+  height: 54rpx;
+  position: absolute;
+  right: 64rpx;
+  top: 464rpx;
+  background-color: rgba(252,207,63,1);
+  font-family: PingFang SC;
+  font-size: 28rpx;
+  font-weight: Regular;
+  border-radius: 28rpx;
+  text-align: center;
+  line-height: 54rpx;
 }

@@ -1,0 +1,68 @@
+<import src="../../template/template.wxml" />
+<form bindsubmit="formSubmit">
+<view class='order-sure'>
+  <view class='order-sure-next'>
+    <view class='order-sure-orderqr'>
+      <text>确认订单</text>
+    </view>
+    <view class='order-sure-ordernr'>
+      <view>
+        <view class='date-left'>预约日期：</view>
+        <view class='date-left'>预约时间：</view>
+        <view class='date-left'>预约门店：</view>
+        <view class='date-left'>预约项目：</view>
+        <view class='date-left'>预约金额：</view>
+      </view>
+      <view style='margin-left:20rpx;'>
+        <view class='date-right'>{{schDate}}</view>
+        <view class='date-right'>{{schTime}}</view>
+        <view class='date-right'>{{stoName}}</view>
+        <view class='date-right'>{{proName}}</view>
+        <view class='date-right'>{{proPrice}}</view>
+      </view>
+    </view>
+
+    <view class='order-sure-orderdj'>
+      <view class='orderdj-text'>
+        <text>需支付定金:</text>
+        <text style='color: red'>${{proSubscription}}</text>
+      </view>
+    </view>
+    <view class='order-sure-action'>
+      <text style='color:white;'>注意事项</text>
+      <view class='order-action-right'>{{Pro_attention}}</view>
+    </view>
+
+  </view>
+</view>
+<view class='order-xx'>预约人信息</view>
+  <view class='ordername'>
+    <view class='name'>姓名</view>
+    <view class='order-name'><input name='inputname'/></view>
+  </view>
+  <view class='ordername'>
+    <view class='sex'>性别</view>
+    <view class='sex-choose'>
+      <radio-group name="sex" width:90px>
+        <label>
+          <radio   value='1' class='sex-choose-next'>男</radio>
+        </label>
+        <label>
+          <radio  value='0' class='sex-choose-next'>女</radio>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='ordername'>
+    <view class='phone'>预约电话</view>
+    <view class='order-phone'><input name='inputphone'/></view>
+  </view>
+  <view class='ordername'>
+    <view class='remark'>预约备注</view>
+    <view class='order-remark'><input name='inputremarks'/></view>
+  </view>
+  <view class='order-form'>
+      <button form-type="submit"  plain='true' bindtap='onMore'>支付定金</button>
+ 
+  </view>
+</form>

@@ -1,0 +1,46 @@
+.overorder{
+  flex-direction: row-reverse;
+}
+.overorder-image{
+  width: 248rpx;
+  height: 232rpx;
+  margin-left: 252rpx;
+  margin-top: 116rpx;
+}
+.order-success{
+  width: 140rpx;
+  height: 40rpx;
+  margin-left: 308rpx;
+  margin-top: 20rpx;
+}
+.order-attention{
+  width: 140rpx;
+  height: 28rpx;
+  color: rgba(251,25,68,1);
+  margin-left: 48rpx;
+}
+.attentionnr{
+  width: 640rpx;
+  height: 360rpx;
+  margin-left: 48rpx;
+  border: 1rpx solid rgb(199, 196, 196);
+  margin-top: 28rpx;
+}
+.order-buttom{
+  width: 600rpx; 
+  height: 64rpx;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  margin-top: 100rpx;
+}
+.order-buttom-text{
+  background: rgba(252,206,57,1);
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  width: 260rpx;
+  height: 50rpx;
+  text-align: center;
+  padding-top: 12rpx;
+}

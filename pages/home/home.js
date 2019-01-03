@@ -1,23 +1,38 @@
-// pages/home/home.js
+import {AddressModel} from '../../modules/address.js'
+import {ProductModel} from '../../modules/product.js'
+const addressModel = new AddressModel()
+const productModel = new ProductModel()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    addresses:[],
+    products:[]
   },
-
+onMore:function(event){
+  wx:wx.navigateTo({
+    url: '../products/products',
+    success: function (res) { },
+    fail: function (res) { },
+    complete: function (res) { },
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-       wx.request({
-         url: 'http://172.21.6.118:8080//PhotographyApplet/demo.do?method=display',
-         success:(res)=>{
-           console.log(res);
-         }
-       })
+    addressModel.getList((res) => {
+      this.setData({
+        addresses: res,
+      });
+    }),
+    productModel.getList((res) => {
+        this.setData({
+          products: res,
+        });
+      })
   },
 
   /**

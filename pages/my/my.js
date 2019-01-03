@@ -1,11 +1,14 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+import { UserModel } from '../../modules/user.js'
+const userModel = new UserModel();
+const app = getApp();
+const openid = wx.getStorageSync('openid');
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
+    openid: '',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -15,7 +18,9 @@ Page({
     })
   },
   onLoad: function () {
+    // openidModel.getList(openid);
     if (app.globalData.userInfo) {
+      userModel.postOpenId(openid)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -36,18 +41,40 @@ Page({
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
-            hasUserInfo: true
+            hasUserInfo: true,
+            namewechat: res.userInfo.nickName
           })
+        }
+      }),
+      wx.request({
+        url: 'http://172.21.6.118:8080//PhotographyApplet/wechat/user.do?method=updateUser',
+        data: "'" + userInfo.nickName +"'",
+        method: POST,
+        success: res=>{
+          console.log(res);
         }
       })
     }
   },
   getUserInfo: function (e) {
+    // console.log(wx.getStorageSync('openid'))
+    userModel.postOpenId(wx.getStorageSync('openid'));
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  updateUserInfo: function (){
+    console.log(openid);
+    wx.navigateTo({
+      url: '../updateinfo/updateinfo?openid=' + openid,
+    })
+  },
+  aboutUs: function () {
+    wx.navigateTo({
+      url: '../aboutus/aboutus',
     })
   }
 })

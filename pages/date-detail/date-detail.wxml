@@ -1,0 +1,12 @@
+<!--pages/detaildate/detaildate.wxml-->
+<view class="detail-date-content">
+  <view class="detail-date-header">
+    <image src="../../images/detail/location.png"></image>
+   <text>{{stoName}}</text>
+  </view>
+  <view class="detail-date-center">
+    <block wx:key="id" wx:for="{{schedule}}">
+      <v-date schedule="{{item}}" stoName="{{stoName}}" proStoId="{{proStoId}}"/> 
+    </block>
+  </view>
+</view>

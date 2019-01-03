@@ -1,0 +1,5 @@
+ <view class='products'>
+      <block wx:key="id" wx:for="{{products}}">
+        <v-product product="{{item}}"/>
+      </block>
+  </view>

@@ -1,0 +1,15 @@
+<view class='container'>
+    <view class="detail-date-header">
+    <view>
+     <image src="../../images/detail/location.png"></image>
+   <text>{{stoName}}</text></view>
+    <text>{{schDate}}</text>
+  </view>
+  <view class='time-section'>
+        <block wx:for="{{timeLists}}" wx:key="id">
+        <view class='time {{item.schFlag?"null":""}} ' bindtap='onTime' hover-class='time-hover'  >
+          <text>{{item.schTime}}</text>
+        </view>
+      </block>
+  </view>
+</view>

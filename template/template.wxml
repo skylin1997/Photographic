@@ -1,0 +1,66 @@
+<template name="infoItem">
+  <view class='order-infomation'>
+    <view class='orderdate'>{{orderinput}}</view>
+    <view>{{orderinput1}}</view>
+  </view>
+</template>
+
+
+
+<template name="orderlistItem">
+  <view class='orderlist' bindtap='onMore' data-ordId="{{ordId}}">
+    <view class='headpicture'>
+      <image style='height:70px;width:70px;' mode="aspectFit" src='../../images/{{proSample}}'></image>
+    </view>
+    <view class='cardstore'>
+      <view>{{proName}}</view>
+      <view class='store-card'>{{stoName}}</view>
+    </view>
+    <view class='datestate'>
+      <view class='datetime'>
+        <text class='time-date' style='font-size:28rpx;'>{{ordTime}}</text>
+      </view>
+      <view class='state-date' wx:if="{{ordState ==1}}">已完成</view>
+      <view class='state-date' wx:if="{{ordState ==2}}">预约中</view>
+      <view class='state-date' wx:if="{{ordState ==3}}">已取消</view>
+    </view>
+  </view>
+</template>
+
+
+
+
+
+
+
+<template name='moreorderItem'>
+  <view class='moreorder'>
+    <view class='moreorderwhite'>
+      <view style='margin-top:20rpx;margin-left:30rpx;'>{{ordName}}</view>
+      <view style='margin-top:20rpx;margin-right:30rpx;'>{{ordPhone}}</view>
+    </view>
+    <view style='margin-left:30rpx;margin-top:30rpx;'>预约备注</view>
+    <view>
+      <view class='ordernr'>
+        <view>
+          <view class='left-ordernr'>预约日期:</view>
+          <view class='left-ordernr'>预约时间:</view>
+          <view class='left-ordernr'>预约门店:</view>
+          <view class='left-ordernr'>预约项目:</view>
+          <view class='left-ordernr'>预约金额:</view>
+        </view>
+        <view style='height:400rpx '>
+          <view class='right-ordernr'>{{schDate}}</view>
+          <view class='right-ordernr'>{{schTime}}</view>
+          <view class='right-ordernr'>{{stoName}}</view>
+          <view class='right-ordernr'>{{proName}}</view>
+          <view class='right-ordernr'>{{proPrice}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='ordermoney'>
+      <text>支付定金 :</text>
+      <text style='color:rgba(251,25,68,1)'>${{proSubscription}}</text>
+    </view>
+  </view>
+</template>

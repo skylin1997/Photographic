@@ -1,0 +1,35 @@
+/* components/wheel/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:268rpx;
+  overflow: visible;
+  transition: all 1s;
+}
+.swiper{
+  width:100%;
+  height:268rpx;
+}
+.slide-image{
+  width: 704rpx;
+  height:268rpx;
+  border-radius: 30rpx;
+  margin:0 24rpx 0 24rpx;
+}
+.wheel-d{
+  display:flex;
+  flex-direction: row;
+  width:auto;
+  height:auto;
+  position:absolute;
+  top:22%;
+  left:45%
+}
+.wheel-d view{
+  width:10rpx;
+  height:10rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin:0 10rpx 0 10rpx;
+}

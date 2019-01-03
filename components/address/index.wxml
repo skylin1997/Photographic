@@ -1,0 +1,8 @@
+<view class="subcontainer" >
+  <image src='images/bg.png'>
+  <view class='msg'>
+    <text class='msg-name'>{{address.stoName}}</text>
+    <text class='msg-address'>{{address.stoAdd}}</text>
+    <text class='msg-phone'>{{address.stoPhone}}</text>
+  </view>
+  </image></view>

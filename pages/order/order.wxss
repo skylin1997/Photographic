@@ -1,1 +1,52 @@
-/* pages/order/order.wxss */
+body{
+   
+}
+.orderlistbackground{
+  height:1200rpx;
+  background: rgb(232, 232, 238);
+  width:100%;
+  padding-top: 20rpx;
+}
+
+.orderlist{
+  display: flex;
+  margin-top: 20rpx;
+  background: white;
+  border-radius: 20rpx 20rpx 20rpx 20rpx ;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 160rpx;
+}
+.headpicture{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 8rpx;
+  margin-top: 10rpx;
+}
+.cardstore{
+  margin-top: 24rpx;
+  margin-left: 16rpx;
+  width: 96rpx;
+}
+
+.store-card{
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+.datestate{
+  margin-top: 24rpx;
+  margin-left: 130rpx;
+}
+.datetime{
+  font-size: 28rpx;
+}
+.time-date{
+  margin-left: 8rpx;
+}
+.state-date{
+  margin-top: 40rpx;
+  margin-left: 180rpx;
+  color: rgba(82,169,255,1);
+}

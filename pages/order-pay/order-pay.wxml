@@ -1,0 +1,13 @@
+<view class='background'>
+  <view class='pay'>
+    <view class='pay-upper'></view>
+    <view class='pay-text'>
+      微信支付
+    </view>
+  </view>
+  <view class='button-pay'>
+    <button type="default" size="default" plain='true' bindtap='onMore'>
+      支付
+    </button>
+  </view>
+</view>

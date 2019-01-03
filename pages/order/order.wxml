@@ -1,2 +1,6 @@
-<!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<import src="../../template/template.wxml" />
+<view class='orderlistbackground'>
+  <block wx:for="{{orderlist}}" wx:key="id">
+    <template is="orderlistItem" data="{{...item}}" />
+  </block>
+</view>

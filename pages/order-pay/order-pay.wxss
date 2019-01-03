@@ -1,0 +1,21 @@
+.background{
+  background: rgba(201,201,201,0.49);
+}
+.pay{
+  height:1112rpx;
+}
+.pay-upper{
+  height: 160rpx;
+}
+.pay-text{
+  margin-left: 72rpx;
+  background: white;
+  height: 200rpx;
+  width: 600rpx;
+  text-align: center;
+  padding-top:120rpx;
+  border: 2rpx solid black;
+}
+.button-pay{
+  border: 2rpx solid wheat;
+}

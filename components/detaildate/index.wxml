@@ -1,0 +1,7 @@
+<!--components/detailtime/index.wxml-->
+<view bind:tap="onDateTap" class="components-date-contnet {{schedule.schFlag? '':'none'}}">
+  <view class="content-date-circle"></view>
+  <view class="content-date-month">{{dateArr[1]}}月</view>
+  <view class="content-date-line"></view>
+  <view class="content-date-days">{{dateArr[2]}}日</view>
+</view>

@@ -1,1 +1,48 @@
-/* pages/home/home.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+.product-container{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+}
+.title{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top:32rpx;
+  font-size: 28rpx;
+}
+.title text{
+  margin-left: 24rpx;
+}
+.title image{
+  width: 48rpx;
+  height: 48rpx;
+  position: relative;
+  top:12rpx;
+  margin-right: 24rpx;
+}
+.products{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding:0 24rpx 0 24rpx;
+
+}
+.scroll{
+  overflow:hidden;
+  white-space:nowrap;
+}
+.address-container{
+  display: flex;
+  flex-direction: column;
+  margin-top:12rpx;
+}
+.address-container text{
+  margin-left: 24rpx;
+}

@@ -1,0 +1,9 @@
+
+<view>
+  <view class='orderfaile-image'> <image style='height:116px;width:124px;' mode="aspectFit" src='../../images/Date.png'></image></view>
+  <view class='order-failed'>支付失败</view>
+  <view class='orderfaile-buttom'>
+  <view class='orderfaile-buttom-text'>继续支付</view>
+  <view class='orderfaile-buttom-text'>返回首页</view>
+  </view>
+  </view>

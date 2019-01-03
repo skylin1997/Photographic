@@ -1,1 +1,7 @@
-{}
+{
+  "usingComponents":{
+    "v-wheel":"/components/wheel/index",
+    "v-product":"/components/product/index",
+    "v-address": "/components/address/index"
+  }
+}

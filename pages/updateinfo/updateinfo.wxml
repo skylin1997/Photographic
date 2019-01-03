@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="section">
+    <view class="section__title">姓名:</view>
+    <view class='form-group'>
+      <input type="text" class="input-text" bindinput='getNameValue' value='{{name}}'/>
+    </view>    
+  </view>
+  
+  <view class="section section_gap">
+      <view class="section__title">性别:</view>
+      <view class='form-group'>
+        <radio-group bindchange='getSexValue' value='{{sex}}'>
+          <label><radio class='radio-left' value="男" checked/>男</label>
+          <label><radio class='radio-right' value="女"/>女</label>
+        </radio-group>
+      </view>    
+    </view>
+
+  <view class="section">
+    <view class="section__title">手机:</view>
+    <view class='form-group'>
+      <input type="text" class="input-text" bindinput='getPhoneValue' value='{{phone}}'/>
+    </view>    
+  </view>
+  
+  <!-- <view class='changeInfoName'>
+     <input class='code-type' placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}'/> 
+     <button class='codeBtn' bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</button>
+  </view> -->
+  <button class='changeBtn' bindtap='save'>保存</button>
+
+</view>

@@ -1,0 +1,33 @@
+  
+  .subcontainer{
+  display: inline-block;
+  width: 540rpx;
+  height:150rpx;
+  background:#fff;
+  border-radius: 20rpx;
+  border:1px solid rgba(209,209,209,1);
+  box-shadow: -2rpx 6rpx 12rpx 0 rgba(0,0,0,0.16);
+  margin:24rpx;
+}
+.subcontainer image{
+  width: 540rpx;
+  height:150rpx;
+  z-index: -1;
+}
+.msg{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  bottom: 150rpx;
+}
+.msg-address{
+  font-size:24rpx;
+  color: #fff;
+}
+.msg-phone{
+  font-size:24rpx;
+  color: #fff;
+}

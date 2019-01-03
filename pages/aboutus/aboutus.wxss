@@ -1,0 +1,86 @@
+/* pages/aboutus/aboutus.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-background{
+  width: 752rpx;
+  height: 308rpx;
+}
+.center-background{
+  position: relative;
+  top: 60rpx;
+  width: 136rpx;
+  height: 32rpx;
+}
+
+.aboutus-intro{
+  position: relative;
+  top: 100rpx;
+  width: 626rpx;
+  height: 394rpx;
+  opacity: 1;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: Regular;
+  color: rgba(0,0,0,1);
+  letter-spacing: 0rpx;
+}
+
+.code-style{
+  position: relative;
+  top: 100rpx;
+  width: 626rpx;
+  height: 130rpx;
+  clear: both;
+  flex-direction: row;
+  margin: 2rem auto;
+  display: inline-block;
+}
+
+.twodimension-code{
+  float: left;
+  position: relative;
+  width: 130rpx;
+  height: 130rpx;
+  opacity: 1;
+  background: rgba(255,255,255,1);
+}
+
+/* .font-style{
+  float:right;
+  position: relative;
+  width: 750rpx;
+  height: 130rpx;
+} */
+
+.font-officalaccounts{
+  position: relative;
+  float:right;
+  width: 140rpx;
+  height: 28rpx;
+  left: -280rpx;
+  opacity: 1;
+  font-size: 28rpx;
+  font-family: Noto Sans S Chinese;
+  font-weight: DemiLight;
+  color: rgba(51,51,51,1);
+  letter-spacing: 0rpx;
+}
+
+.font-scan{
+  position: relative;
+  float:right;
+  top: 100rpx;
+  left: -83rpx;
+  width: 196rpx;
+  height: 28rpx;
+  opacity: 1;
+  font-size: 28rpx;
+  font-family: Noto Sans S Chinese;
+  font-weight: DemiLight;
+  color: rgba(51,51,51,1);
+  letter-spacing: 0rpx;
+}
