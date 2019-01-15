@@ -8,7 +8,7 @@ Page({
     
   },
 
-  onMore: function (event) {
+  onPay: function (event) {
     wx: wx.navigateTo({
       url: '../order-success/order-success',
       success: function (res) { },

@@ -25,12 +25,13 @@ radio .wx-radio-input{
   height: 24rpx;
 }
 .time-section{
-  margin:50rpx 24rpx  24rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  
+    width:80%;
+    padding: 0 90rpx; 
+    margin:50rpx 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .time{
@@ -47,6 +48,7 @@ radio .wx-radio-input{
   line-height: 46rpx;
 }
 .null{
+  border:rgba(199,199,199,1);
   background:rgba(199,199,199,1);
   color: #fff;
   pointer-events: none;

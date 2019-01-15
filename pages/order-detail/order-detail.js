@@ -8,21 +8,53 @@ Page({
    */
 
   data: {
-    moreorders:[]
+    moreorders:[],
+    ordId:'',
+    schId:'',
+    forbid:true
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    this.setData({
+      ordId: options.ordId,
+      schId : options.schId,
+      forbid : options.ordState==2?false:true
+    })
+    // console.log(options.ordId, options.schId, options.ordState)
     orderModel.getOrderDetail((res) => {
       this.setData({
         moreorders: res,
       });
-    })
+    }, options.ordId)
   },
-  
-
+  onCancel(){
+    orderModel.cancelOrder((res)=>{
+      if(res==true){
+        wx.showToast({
+          title: '取消预约成功',
+          icon: 'none',
+          duration: 5000      
+        })
+        wx.switchTab({
+          url: '/pages/order/order',
+          success: function (e) {
+            var page = getCurrentPages().pop();
+            if (page == undefined || page == null) return;
+            page.onLoad();
+          } 
+        })
+      }
+      else{
+        wx.showToast({
+          title: '取消预约失败，请重试！',
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    },this.data.ordId,this.data.schId)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

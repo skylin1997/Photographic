@@ -14,23 +14,23 @@
         <view class='date-left'>预约金额：</view>
       </view>
       <view style='margin-left:20rpx;'>
-        <view class='date-right'>{{schDate}}</view>
-        <view class='date-right'>{{schTime}}</view>
-        <view class='date-right'>{{stoName}}</view>
-        <view class='date-right'>{{proName}}</view>
-        <view class='date-right'>{{proPrice}}</view>
+        <view class='date-right'>{{orderInfo.schDate}}</view>
+        <view class='date-right'>{{orderInfo.schTime}}</view>
+        <view class='date-right'>{{orderInfo.StoName}}</view>
+        <view class='date-right'>{{orderInfo.proName}}</view>
+        <view class='date-right'>{{orderInfo.proPrice}}</view>
       </view>
     </view>
 
     <view class='order-sure-orderdj'>
       <view class='orderdj-text'>
         <text>需支付定金:</text>
-        <text style='color: red'>${{proSubscription}}</text>
+        <text style='color: red; font-family: Microsoft YaHei;font-weight:Bold;'>￥{{orderInfo.proSubscription}}</text>
       </view>
     </view>
     <view class='order-sure-action'>
-      <text style='color:white;'>注意事项</text>
-      <view class='order-action-right'>{{Pro_attention}}</view>
+      <text>注意事项:</text>
+      <view class='order-action-right'>{{orderInfo.Pro_attention}}</view>
     </view>
 
   </view>
@@ -38,31 +38,28 @@
 <view class='order-xx'>预约人信息</view>
   <view class='ordername'>
     <view class='name'>姓名</view>
-    <view class='order-name'><input name='inputname'/></view>
+    <view class='order-name'><input name='inputname' bindinput='getNameValue'/></view>
   </view>
   <view class='ordername'>
     <view class='sex'>性别</view>
     <view class='sex-choose'>
-      <radio-group name="sex" width:90px>
+      <radio-group name="sex" width:90px bindchange='getSexValue'>
         <label>
-          <radio   value='1' class='sex-choose-next'>男</radio>
+          <radio   value='男' class='sex-choose-next'>男</radio>
         </label>
         <label>
-          <radio  value='0' class='sex-choose-next'>女</radio>
+          <radio  value='女' class='sex-choose-next'>女</radio>
         </label>
       </radio-group>
     </view>
   </view>
   <view class='ordername'>
     <view class='phone'>预约电话</view>
-    <view class='order-phone'><input name='inputphone'/></view>
+    <view class='order-phone'><input name='inputphone' bindinput='getPhoneValue'/></view>
   </view>
   <view class='ordername'>
     <view class='remark'>预约备注</view>
-    <view class='order-remark'><input name='inputremarks'/></view>
+    <view class='order-remark'><input name='inputremarks'bindinput='getAddValue'/></view>
   </view>
-  <view class='order-form'>
-      <button form-type="submit"  plain='true' bindtap='onMore'>支付定金</button>
- 
-  </view>
+  <view class='order-form' form-type="submit" plain='true' bindtap='onSubmitOrder'>支付定金</view>
 </form>

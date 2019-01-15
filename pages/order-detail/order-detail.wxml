@@ -1,12 +1,8 @@
-<import src="../template/template.wxml" />
+<import src="../../template/template.wxml" />
 <block wx:for="{{moreorders}}" wx:key="id">
     <template is="moreorderItem" data="{{...item}}" />
   </block>
 <view class='moreorder-buttom'>
-  <view class='left-buttom'>
-    <navigator url="/pages/orderlist/orderlist" open-type="switchTab">
-      取消预约
-    </navigator>
-  </view>
+  <view class="left-buttom {{forbid?'null':''}}" bindtap='onCancel'> 取消预约</view>
   <view class='right-buttom'>下载电子订单</view>
 </view>

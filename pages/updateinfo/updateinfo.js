@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    openid:'',
     name: '',//姓名
     sex: '',//性别
     phone: '',//手机号
@@ -138,10 +139,7 @@ Page({
     //   return false;
     // } 
     else {
-      wx.setStorageSync('name', this.data.name);
-      wx.setStorageSync('sex', this.data.sex);
-      wx.setStorageSync('phone', this.data.phone);
-      userModel.getList(wx.getStorageSync('openid'), wx.getStorageSync('name'), wx.getStorageSync('sex'), wx.getStorageSync('phone'));
+      userModel.updateUserInfo(this.data.openid,this.data.name,this.data.sex,this.data.phone);
       wx.showToast({
         title: '保存成功',
       })
@@ -155,12 +153,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // const open_id = options.openid;
-    // userModel.getList((res) => {
-    //   this.setData({
-    //     user: res,
-    //   });
-    // })
+    const open_id = options.openid;
+    userModel.getList((res) => {
+      this.setData({
+        user: res,
+      });
+    })
   },
   
   /**

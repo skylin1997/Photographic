@@ -8,9 +8,9 @@
 
 
 <template name="orderlistItem">
-  <view class='orderlist' bindtap='onMore' data-ordId="{{ordId}}">
+  <view class='orderlist' bindtap='onMore' data-ordid="{{ordId}}" data-schid="{{schId}}" data-ordstate="{{ordState}}">
     <view class='headpicture'>
-      <image style='height:70px;width:70px;' mode="aspectFit" src='../../images/{{proSample}}'></image>
+      <image style='height:70px;width:70px;' mode="aspectFit" src='http://172.21.6.118:8080//images{{proSample}}'></image>
     </view>
     <view class='cardstore'>
       <view>{{proName}}</view>
@@ -49,7 +49,7 @@
           <view class='left-ordernr'>预约项目:</view>
           <view class='left-ordernr'>预约金额:</view>
         </view>
-        <view style='height:400rpx '>
+        <view class='order-list'>
           <view class='right-ordernr'>{{schDate}}</view>
           <view class='right-ordernr'>{{schTime}}</view>
           <view class='right-ordernr'>{{stoName}}</view>
@@ -60,7 +60,7 @@
     </view>
     <view class='ordermoney'>
       <text>支付定金 :</text>
-      <text style='color:rgba(251,25,68,1)'>${{proSubscription}}</text>
+      <text style='color:rgba(251,25,68,1)'>￥{{proSubscription}}</text>
     </view>
   </view>
 </template>

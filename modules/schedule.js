@@ -8,6 +8,7 @@ export class ScheduleModel extends HTTP{
       },
       success: (res) =>{
         sCallBack(res.detail.schedule)
+        // console.log(res.detail.schedule)
       }
     });
   }
@@ -17,6 +18,7 @@ export class ScheduleModel extends HTTP{
         url: '/wechat/schedule.do?method=getTime&proStoId=' + proStoId + '&schDate=' + schDate,
         success: (res) => {
           sCallback(res.detail.schedule)
+          console.log(res.detail.schedule)
         }
       })
   }

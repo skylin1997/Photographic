@@ -37,13 +37,30 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
 					"name": "productdetail",
 					"pathName": "pages/product-detail/product-detail",
 					"query": "pid=1"
+				},
+				{
+					"id": -1,
+					"name": "order-success",
+					"pathName": "pages/order-success/order-success",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order-fail",
+					"pathName": "pages/order-fail/order-fail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order-pay",
+					"pathName": "pages/order-pay/order-pay"
 				}
 			]
 		}

@@ -16,11 +16,13 @@ Page({
     })
   },
   onHome: function (event) {
-    wx: wx.switchTab({
-      url: '../order/order',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
+    wx.switchTab({
+      url: '/pages/order/order',
+      success: function (e) {
+        var page = getCurrentPages().pop();
+        if (page == undefined || page == null) return;
+        page.onLoad();
+      }
     })
   },
   /**

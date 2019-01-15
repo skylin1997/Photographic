@@ -7,7 +7,24 @@ Page({
   data: {
 
   },
-
+  onHome: function (event) {
+    wx: wx.switchTab({
+      url: '../home/home',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+  onOrder: function (event) {
+    wx.switchTab({
+      url: '/pages/order-submit/order-submit',
+      success: function (e) {
+        // var page = getCurrentPages().pop();
+        // if (page == undefined || page == null) return;
+        // page.onLoad();
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

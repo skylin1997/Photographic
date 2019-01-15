@@ -5,7 +5,7 @@ export class ProductModel extends HTTP {
       {
         url: 'wechat/product.do?method=proData',
         success: (res) => {
-          console.log(res)
+          // console.log(res)
           sCallback(res.detail.proList)
         }
       })
@@ -15,7 +15,7 @@ export class ProductModel extends HTTP {
       {
         url: '/wechat/product.do?method=getProDetail&proId='+pid,
         success: (res) => {
-          console.log(res)
+          // console.log(res)
           sCallback(res.detail)
         }
       })

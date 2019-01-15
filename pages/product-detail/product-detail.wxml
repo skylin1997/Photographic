@@ -1,6 +1,6 @@
 <view class='container'>
   <view class='msg'>
-    <image class='msg-image' src='http://172.21.6.118:8080//images{{productDetail.proName}}'></image>
+    <image class='msg-image' src='http://172.21.6.118:8080//images{{productDetail.proSample}}' wx:if="{{productDetail.proSample}}"></image>
     <view class='msg-text'>
       <text class='msg-name'>{{productDetail.proName}}</text>
       <text class='msg-price'>￥{{productDetail.proPrice}}</text>

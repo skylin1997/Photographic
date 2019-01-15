@@ -24,7 +24,6 @@ Page({
     const pid = options.pid;
     productModel.getDetailList((res) => {
       let flag=true;
-      console.log(res.store)
       flag = res.store.length==0?false:true;
       this.setData({
         productDetail: res.proDetail,
@@ -36,6 +35,7 @@ Page({
   },
 onStore(e){
   let index = e.currentTarget.dataset.index
+  console.log(index)
   let list=this.data.storeList
   this.setData({
     stoId: index,

@@ -5,9 +5,7 @@
       微信支付
     </view>
   </view>
-  <view class='button-pay'>
-    <button type="default" size="default" plain='true' bindtap='onMore'>
+  <view class='button-pay'bindtap='onPay'>
       支付
-    </button>
   </view>
 </view>

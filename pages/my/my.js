@@ -3,25 +3,18 @@
 import { UserModel } from '../../modules/user.js'
 const userModel = new UserModel();
 const app = getApp();
-const openid = wx.getStorageSync('openid');
 Page({
   data: {
+    openId:'',
     userInfo: {},
     hasUserInfo: false,
-    openid: '',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
-    // openidModel.getList(openid);
     if (app.globalData.userInfo) {
-      userModel.postOpenId(openid)
+      let openId= userModel.getOpenId()
       this.setData({
+        openId: app.globalData.openId,
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
@@ -29,6 +22,8 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
+        let openId = userModel.getOpenId()
+        app.globalData.openId = openId
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -38,6 +33,8 @@ Page({
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
+          let openId = userModel.getOpenId()
+          app.globalData.openId = openId
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
@@ -45,21 +42,11 @@ Page({
             namewechat: res.userInfo.nickName
           })
         }
-      }),
-      wx.request({
-        url: 'http://172.21.6.118:8080//PhotographyApplet/wechat/user.do?method=updateUser',
-        data: "'" + userInfo.nickName +"'",
-        method: POST,
-        success: res=>{
-          console.log(res);
-        }
       })
     }
+    console.log(app.globalData.userInfo, app.globalData.openId)
   },
   getUserInfo: function (e) {
-    // console.log(wx.getStorageSync('openid'))
-    userModel.postOpenId(wx.getStorageSync('openid'));
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
@@ -67,9 +54,8 @@ Page({
     })
   },
   updateUserInfo: function (){
-    console.log(openid);
     wx.navigateTo({
-      url: '../updateinfo/updateinfo?openid=' + openid,
+      url: '../updateinfo/updateinfo?openId=' + app.globalData.openId,
     })
   },
   aboutUs: function () {

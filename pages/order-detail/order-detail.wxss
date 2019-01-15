@@ -1,3 +1,6 @@
+page{
+    background:  #F4F5F6;
+}
 .moreorder{
   flex-direction: row-reverse;
   font-size: 28rpx;
@@ -7,7 +10,9 @@
   margin-top: 30rpx;
   border: 2rpx solid beige;
   border-radius: 20rpx 20rpx 20rpx 20rpx;
-  color: rgb(145, 137, 137);
+  background: #fff;
+  color: rgba(0,0,0,1);
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
 }
 .moreorderwhite{
   display: flex;
@@ -28,6 +33,12 @@
   margin-right: 30rpx;
 
 }
+.order-list{
+  height:400rpx;  
+  font-family: Microsoft YaHei;
+ color: rgba(0,0,0,1);
+  letter-spacing: 0px;
+}
 .left-ordernr{
   border-bottom:2rpx solid black;
   margin-top: 30rpx;
@@ -36,7 +47,7 @@
 .right-ordernr{
   border-bottom:2rpx solid black;
   padding-bottom: 10rpx;
-  padding-left: 280rpx;
+  padding-left: 340rpx;
   color: rgba(0,0,0,1);
   font-size: 28rpx;
   margin-top: 30rpx;
@@ -56,7 +67,7 @@
   
 }
 .left-buttom{
-  background: yellow;
+  background: rgba(252,206,57,1);
   width: 280rpx;
   height: 56rpx;
   text-align: center;
@@ -70,4 +81,8 @@
   text-align: center;
   padding-top: 12rpx;
   border-radius: 20rpx 20rpx 20rpx 20rpx;
+}
+.null{
+  background:  rgb(167, 167, 157);
+  pointer-events: none;
 }

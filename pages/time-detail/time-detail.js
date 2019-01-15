@@ -2,16 +2,20 @@ import { ScheduleModel} from '../../modules/schedule.js'
 const timeModel = new ScheduleModel()
 Page({
   data: {
+    time:'',
     timeLists:[],
     stoName:'',
     schDate:'',
     proStoId:'',
-    schId:''
+    schId:0
   },
   onTime: function (e) {
-    let schTime = this.data.timelists.schTime
+    let index = e.currentTarget.dataset.index
+    this.setData({
+      schId: this.data.timeLists[index].schId
+    })
     wx: wx.navigateTo({
-      url: '' + schId,
+      url: '../order-submit/order-submit?schId=' +this.data.schId ,
        success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
@@ -30,8 +34,12 @@ Page({
       stoName: stoName
     })
     timeModel.getTimeList((res)=>{
+      let time=res;
+      time.forEach((item) => {
+        item.schTime = item.schTime.substring(0, 5); 
+      })
        this.setData({
-         timeLists:res
+         timeLists:time
        })
      }, proStoId, schDate)
   },
